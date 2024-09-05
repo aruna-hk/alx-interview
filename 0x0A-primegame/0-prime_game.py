@@ -11,17 +11,21 @@ def isWinner(x, nums):
         if i > len(nums) - 1:
             break
         primes = [m for m in range(2, nums[i] + 1)]
+        if len(primes) == 0:
+            starter = False
         while (len(primes) > 0):
-            if starter:
-                starter = False
-                maria += 1
-            else:
-                starter = True
-                ben += 1
             zeroth = primes[0]
             for prime in primes:
                 if (prime % zeroth == 0):
                     primes.remove(prime)
+            if starter:
+                starter = False
+            else:
+                starter = True
+        if starter:
+            maria += 1
+        else:
+            ben += 1
     if maria == ben:
         return None
     if maria > ben:
