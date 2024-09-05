@@ -15,7 +15,6 @@ def isWinner(x, nums):
             starter = False
         while (len(primes) > 0):
             zeroth = primes[0]
-            print(primes)
             for prime in primes:
                 if (prime % zeroth == 0):
                     primes.remove(prime)
