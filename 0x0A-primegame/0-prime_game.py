@@ -18,10 +18,10 @@ def isWinner(x, nums):
             for prime in primes:
                 if (prime % zeroth == 0):
                     primes.remove(prime)
-            if len(primes) == 0 and starter == True:
+            if len(primes) == 0 and starter is True:
                 starter = False
             else:
-                starter == True
+                starter = True
         if starter:
             maria += 1
         else:
